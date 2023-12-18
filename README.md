@@ -17,12 +17,12 @@ Our code is heavily borrowed from DeiT (https://github.com/facebookresearch/deit
 ## Training:
 
 ## Test:
-Test DeiT-Tiny achieved by Bi-ViT  (66.9 Top-1 accuracy):
+Test DeiT-Tiny achieved by Bi-ViT:
 
 > python -m torch.distributed.launch --master_port=12345 --nproc_per_node=4 --use_env main_1bit.py --model bi_deit_tiny_patch16_224 --data-path /your/path/to/ImageNet/ --output_dir ./test --distillation-type hard --teacher-model deit_tiny_patch16_224  --resume best_checkpoint_tiny.pth --eval 
 
 
-Test DeiT-Small achieved by Bi-ViT  (66.9 Top-1 accuracy):
+Test DeiT-Small achieved by Bi-ViT:
 
 > python -m torch.distributed.launch --master_port=12345 --nproc_per_node=4 --use_env main_1bit.py --model bi_deit_small_patch16_224 --data-path /your/path/to/ImageNet/ --output_dir ./test --distillation-type hard --teacher-model deit_small_patch16_224  --resume best_checkpoint_tiny.pth --eval 
 
