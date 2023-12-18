@@ -1,7 +1,22 @@
-# ICCV2984
+# Bi-ViT: Pushing the Limit of Vision Transformer Quantization
 
-Requirements: pytorch 1.7.1 cudatoolkit 10.1
+Pytorch implementation of our Bi-ViT accepted by AAAI2024.
 
+## Tips
+
+Any problem, please contact the first author (Email: yanjingli@buaa.edu.cn). 
+
+Our code is heavily borrowed from DeiT (https://github.com/facebookresearch/deit).
+
+## Dependencies
+* Python 3.8
+* Pytorch 1.7.1
+* Torchvision 0.8.2
+* timm 0.4.12
+
+## Training:
+
+## Test:
 Test DeiT-Tiny achieved by Bi-ViT  (66.9 Top-1 accuracy):
 
 > python -m torch.distributed.launch --master_port=12345 --nproc_per_node=4 --use_env main_1bit.py --model bi_deit_tiny_patch16_224 --data-path /your/path/to/ImageNet/ --output_dir ./test --distillation-type hard --teacher-model deit_tiny_patch16_224  --resume best_checkpoint_tiny.pth --eval 
